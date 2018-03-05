@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addrfilter>
+	<rule name="base" >
+		<ip>
+			<expression>\d+\.\d+\.\d+\.\d+</expression>
+		</ip>
+		<urls>
+			<url>/system/login.action</url>
+			<url>/system/remote.action</url>
+			<url>/services</url>
+			<url>/pushlet.srv</url>
+			<url>/</url>
+		</urls>
+		<log>
+			<off>(\.gif)$|(\.jpg)$|(\.png)$|(\.bmp$)</off>
+			<on>(\.js)$|(\.css)$|(login.jsp)$</on>
+		</log>
+	</rule>
+</addrfilter>

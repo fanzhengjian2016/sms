@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<renderer>
+	<combos>
+		<combo name="sex" data="[{'code':'1',info:'男'},{'code':'0',info:'女'}]" />
+		<combo name="credential" data="[{'code':'1',info:'身份证'},{'code':'2',info:'驾驶证'}]" />
+		<combo name="state" sql="select wbVal1,wbName from tb_sys_wordbook where state=1 and wbVal2='state'" />
+	</combos>
+</renderer>

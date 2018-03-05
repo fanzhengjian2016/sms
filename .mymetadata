@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Interactive"
+  id="myeclipse.1403592461606"
+  context-root="/Interactive"
+  j2ee-spec="5.0"
+  archive="Interactive.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jbox>
+	<node id="wfstart" jtype="img" text="" x="100" y="100" w="40" h="40" src="jbox_ext/images/workflow/node/start_event_empty.png" />
+	
+	<node id="wfterminate" jtype="img" text="" x="1200" y="500" w="40" h="40" src="jbox_ext/images/workflow/node/end_event_terminate.png" />
+	
+	<node id="fork1" jtype="img" text="" x="300" y="400" w="38" h="38" src="jbox_ext/images/workflow/node/fork.gif" />
+	
+	<node id="join1" jtype="img" text="" x="500" y="400" w="38" h="38" src="jbox_ext/images/workflow/node/join.gif" />
+	
+	<node id="node1" jtype="task" text="节点一" x="300" y="150" w="200" h="80">
+	
+	</node>
+	<node id="node2"  jtype="task" text="节点二" x="800" y="300" w="200" h="80">
+	
+	</node>
+	<node id="node3"  jtype="task"  text="节点三" x="900" y="100" w="200" h="80">
+	
+	</node>
+	<connection source_uuid="wfstart_BottomCenter" target_uuid="node1_LeftMiddle" mark="节点一成功进入"></connection>
+	<connection source_uuid="node1_TopCenter" target_uuid="node2_LeftMiddle" mark="节点一成功进入"></connection>
+	<connection source_uuid="node2_TopCenter" target_uuid="node3_LeftMiddle" mark="节点一成功进入" ></connection>
+	<connection source_uuid="node2_BottomCenter" target_uuid="wfterminate_LeftMiddle" mark="节点一成功进入"></connection>
+	<connection source_uuid="node3_BottomCenter" target_uuid="wfterminate_LeftMiddle" mark="节点一成功进入"></connection>
+</jbox>

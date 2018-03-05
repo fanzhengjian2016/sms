@@ -1,0 +1,48 @@
+ <!DOCTYPE struts PUBLIC
+         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+         "http://struts.apache.org/dtds/struts-2.0.dtd">
+ <struts>
+    <include file ="struts-default.xml" />
+    
+    <!-- 在struts.xml配置文件，添加constant，将action交由Spring管理。 -->
+    <constant name="struts.objectFactory" value="spring" />
+    
+    <!-- 支持Struts2方法的跳转 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    
+    <!-- 最大文件大小 -->
+    <constant name= "struts.multipart.maxSize" value="10000000000" />
+    
+    <!-- 配置测试模块 -->
+    <include file="struts/struts-debug-config.xml"></include>
+    
+    
+    <!-- **************************************导入子文件************************************ -->
+
+    <!-- 系统维护 -->
+    <include file="struts/struts-debug-config.xml"></include>
+
+   
+    
+    <!-- ********************************************************************************* -->
+    
+    <package name="Main-Struts2" extends="struts-default,jasperreports-default">
+    	<interceptors>
+    		<interceptor name="TI" class="com.shenjun.web.struts.interceptor.TransactionInterceptor"></interceptor>
+    		<interceptor-stack name="myStack">
+    			<interceptor-ref name="TI"></interceptor-ref>
+    			<interceptor-ref name="defaultStack"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    	<default-interceptor-ref name="myStack"></default-interceptor-ref>
+    	
+    	
+    	<global-results >
+    		<result name="error">/commons/errors/error.jsp</result>
+    	</global-results>
+    	<global-exception-mappings> 
+			<exception-mapping result="error" exception="java.lang.Exception"> </exception-mapping> 
+		</global-exception-mappings> 
+    </package>
+   
+ </struts>

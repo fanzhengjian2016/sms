@@ -1,0 +1,13 @@
+package com.shenjun.enums;
+
+public enum ReturnEnum {
+	AJAX_TYPE,
+	JSP_CODE_NAME_TYPE,
+	FILE_TYPE,
+	JSP_FORWARD_TYPE,
+	JSP_REDIRECT_TYPE,
+	JSP_STREAM_TYPE,
+	XML_TYPE,
+	JASPER_S,
+	NONE
+}

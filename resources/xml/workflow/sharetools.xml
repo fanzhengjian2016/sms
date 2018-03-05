@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+	<group text="演示示例" >
+		<menu
+			text="开始" ptype="startEvent" icon="jbox_ext/images/workflow/node/start_event_empty.png" 
+		 />
+		<menu
+			text="结束" ptype="endEvent" icon="jbox_ext/images/workflow/node/end_event_terminate.png" 
+		 />
+		 <menu
+			text="用户任务" ptype="userTask" icon="jbox_ext/images/workflow/node/users.png" 
+		 />
+		 <menu
+			text="脚本任务" ptype="scriptTask" icon="jbox_ext/images/workflow/node/clock.png" 
+		 />
+		 <menu
+			text="合并" ptype="complexGateway" gatewayDirection="Converging" icon="jbox_ext/images/workflow/node/fork.gif" 
+			src="jbox_ext/images/workflow/wf24/join.png"
+		 />
+		 <menu
+			text="分开" ptype="complexGateway" gatewayDirection="Diverging" icon="jbox_ext/images/workflow/node/join.gif" 
+			src="jbox_ext/images/workflow/wf24/fork.png"
+		 />
+	</group>
+</menus>

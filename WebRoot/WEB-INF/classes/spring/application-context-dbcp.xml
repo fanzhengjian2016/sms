@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-lazy-init="false">
+	
+	
+	<!-- dbcp数据库连接池配置-->
+	<bean id="dbcp" class="com.shenjun.plugins.dbcp.JBasicDataSource" destroy-method="close" >
+		<!-- 
+		validationQuery：用于验证连接是否成功的查询SQL语句
+		，SQL语句必须至少要返回一行数据， 如你可以简单地设置为：“select 1 from dual”； -->
+        <property name="validationQuery">
+            <value>select 1</value>
+        </property>
+        <property name="initialSize">
+            <value>3</value>
+        </property>
+        <!-- maxActive：最大连接数据库连接数，设置为0时，表示没有限制；  -->
+        <property name="maxActive">
+            <value>15</value>
+        </property>
+        <!-- maxIdle：最大等待连接中的数量，设置为0时，表示没有限制；   -->
+        <property name="maxIdle">
+            <value>5</value>
+        </property>
+        <!-- maxWait：最大等待秒数，单位为毫秒， 超过时间会报出错误信息； -->
+        <property name="maxWait">
+            <value>10000</value>
+        </property>
+        <property name="minIdle">
+            <value>3</value>
+        </property>
+        <property name="testWhileIdle"><value>true</value></property>
+		<property name="testOnBorrow"><value>false</value></property>
+		<property name= "testOnReturn"><value>false</value></property>
+		<property name="timeBetweenEvictionRunsMillis"><value>10000</value></property>
+		<!-- 
+			defaultAutoCommit：设置从数据源中返回的连接是否采用自动提交机制，默认值为 true； 
+		    defaultReadOnly：设置数据源是否仅能执行只读操作， 默认值为 false； 
+		    removeAbandoned：是否自我中断，默认是 false ； 
+		    removeAbandonedTimeout：几秒后数据连接会自动断开，在removeAbandoned为true，提供该值； 
+		    logAbandoned：是否记录中断事件， 默认为 false；
+		 -->
+    </bean> 
+</beans>

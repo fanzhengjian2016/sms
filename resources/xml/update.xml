@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apps>
+	<app name="jbox_touch">
+		<version id="1.0.0.1" >
+			<files>
+				<file action="update">XXXX</file>
+				<file action="add">XXXX</file>
+				<file action="remove">XXXX</file>
+			</files>
+			<remark>
+				1.本次更新内容为XXXXX
+			</remark>
+		</version>
+		<version id="1.0.0.0">
+			<files>
+				<file action="install">XXXX</file>
+			</files>
+			<remark>
+				1.直接替换,安装
+			</remark>
+		</version>
+	</app>
+</apps>

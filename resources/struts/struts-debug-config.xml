@@ -1,0 +1,9 @@
+ <!DOCTYPE struts PUBLIC
+         "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+         "http://struts.apache.org/dtds/struts-2.0.dtd">
+ <struts>
+ 	<!-- 系统调试 -->
+    <package name ="Systems-Ioc-Debug" namespace="/debug" extends ="Main-Struts2" >
+     	
+    </package>
+ </struts>

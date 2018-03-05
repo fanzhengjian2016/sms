@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+	"http://java.sun.com/j2ee/dtd/web-jsptaglibrary_1_2.dtd">
+
+<!-- a tag library descriptor -->
+<taglib>
+	<tlib-version>1.0</tlib-version>          
+	<jsp-version>1.2</jsp-version>            
+	<short-name>My Taglib</short-name>
+	<uri>http://java.shenjun.com/jsp/core</uri>    
+
+	<!-- no body tag descriptor -->
+	<tag>
+        <name>jspaddr</name>                    
+        <tag-class>com.shenjun.web.tag.JspAddrTag</tag-class>   
+        <body-content>empty</body-content>
+	</tag>
+	
+	<tag>
+        <name>webroot</name>                    
+        <tag-class>com.shenjun.web.tag.WebRootTag</tag-class>   
+        <body-content>empty</body-content>
+	</tag>
+		<tag>
+        <name>fckeditor</name>                    
+        <tag-class>com.shenjun.web.tag.FckeditorTag</tag-class>   
+        <body-content>jsp</body-content>
+        <attribute>
+          <name>value</name>           
+          <required>false</required>            
+          <rtexprvalue>true</rtexprvalue>      
+        </attribute>
+        <attribute>
+          <name>width</name>           
+          <required>false</required>            
+          <rtexprvalue>true</rtexprvalue>      
+        </attribute>
+        <attribute>
+          <name>height</name>           
+          <required>false</required>            
+          <rtexprvalue>true</rtexprvalue>      
+        </attribute>
+	</tag>
+</taglib>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bills>
+	<bill id="sys_wordbook" table="tb_sys_wordbook">
+		<column primary="w1[0000]" name="wbno" search="true">
+			<![CDATA[
+				{"emptyText":"自动生成","readOnly":"true","searchFilters":"emptyText,readOnly"}
+			]]>
+		</column>
+		<column name="wbname" cond="like" search="true" ></column>
+		<column name="expxml" display="none" ></column>
+		<column name="updatetime" >
+			<![CDATA[
+				{"xtype":"datefield","value":"now"}
+			]]>
+		</column>
+		<column name="state" filter="state=1" renderer="state" search="true" >
+			<![CDATA[
+				{"xtype":"jcombo","comboId":"state","value":"1"}
+			]]>
+		</column>
+	</bill>
+	<bill id="sys_user" table="tb_sys_user">
+		<column primary="1[0000]" name="userno">
+			<![CDATA[
+				{"emptyText":"自动生成","readOnly":"true","searchFilters":"emptyText,readOnly"}
+			]]>
+		</column>
+		<column name="userImge" sortindex="2" >
+			<![CDATA[
+				{"rowspan":"3","hideLabel":"true"}
+			]]>
+		</column>
+		<column name="pwd" display="none" ></column>
+		<column name="expxml" display="none" ></column>
+		<column name="updatetime" >
+			<![CDATA[
+				{"xtype":"datefield","value":"now"}
+			]]>
+		</column>
+		<column name="state" filter="state=1" renderer="state" search="true" >
+			<![CDATA[
+				{"xtype":"jcombo","comboId":"state","value":"1"}
+			]]>
+		</column>
+		<column name="remark" sort="1">
+			<![CDATA[
+				
+			]]>
+		</column>
+	</bill>
+</bills>
+<!-- 本XML文件以模块名_加业务名 -->

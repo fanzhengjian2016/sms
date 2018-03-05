@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+       xmlns:context="http://www.springframework.org/schema/context"   
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans.xsd  
+            http://www.springframework.org/schema/context    
+            http://www.springframework.org/schema/context/spring-context.xsd">  
+	
+  	<!-- 定义触发时间 {cron表达式 }eg:1 
+  	<bean id="ctb" class="com.shenjun.timertask.JxCronTriggerFactoryBean">
+  		<property name="services">
+			<list>
+    			<bean class="com.services.data.DataSynch"></bean>
+    			<bean class="com.plugins.wechat.WeChatTask"></bean>
+    		</list>
+		</property>
+        <property name="cronExpression">
+            <value>0/5 * * * * ?</value>
+        </property>
+  	</bean>-->
+  	
+    <!-- 定义触发时间{cron表达式 } eg:2-->
+  	<bean id="ctb" class="com.shenjun.timertask.JxCronTriggerFactoryBean">
+  		<property name="service">
+  			<bean class="com.services.data.DataSynch"></bean>
+  		</property>
+        <property name="cronExpression" value="0 0/1 * * * ?" />
+  	</bean>
+  	
+  	<!-- 总管理类  -->
+  	<bean id="startQuertz" scope="singleton" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+              <!--  <ref bean="ctb"/> -->
+            </list>
+        </property>
+    </bean>
+</beans>

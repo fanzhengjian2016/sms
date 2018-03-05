@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="template" 
+			targetNamespace="http://www.jboss.org/drools"
+            typeLanguage="http://www.java.com/javaTypes"
+            expressionLanguage="http://www.mvel.org/2.0"
+            xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+            xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+            xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+            xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+            xmlns:tns="http://www.jboss.org/drools"
+>
+  	<itemDefinition id="_systemName" structureRef="String" />
+  	
+	<process processType="Private" isExecutable="true" id="com.jbox.template" name="template Name" tns:packageName="defaultPackage" tns:version="1.0.1" >
+		<!-- process variables -->
+    	<property id="systemName" itemSubjectRef="null"/>
+		
+		
+		<startEvent id="_start" name="StartProcess" />
+		
+		<endEvent id="_end" name="End" >
+	        <terminateEventDefinition />
+	    </endEvent>
+	</process>
+	<bpmndi:BPMNDiagram>
+		<bpmndi:BPMNPlane bpmnElement="com.jbox.template">
+		
+			<bpmndi:BPMNShape bpmnElement="_start" >
+		    	<dc:Bounds x="45" y="45" width="48" height="48" />
+		    </bpmndi:BPMNShape>
+		    
+		    <bpmndi:BPMNShape bpmnElement="_end" >
+		    	<dc:Bounds x="45" y="245" width="48" height="48" />
+		    </bpmndi:BPMNShape>
+		</bpmndi:BPMNPlane>
+	</bpmndi:BPMNDiagram>
+</definitions>

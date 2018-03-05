@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+	<group text="演示示例" >
+		<menu
+			text="Jgrid" icon="jbox_ext/images/menu/c_re_x2.png"  classname="Jbox.test.JGridTest"
+		 />
+		 <menu
+			text="workflow demo" icon="jbox_ext/images/menu/12X0F1461F-312X4.png"  classname="Jbox.test.JsplumbTest"
+		 />
+		 <menu
+			text="layout demo" icon="jbox_ext/images/menu/12X0F12Y50-151152.png"  classname="Jbox.test.JAutoLayoutTest"
+		 />
+		 <menu
+			text="JModulesTest" icon="jbox_ext/images/menu/c_w_box.png"  classname="Jbox.test.JModulesTest"
+		 />
+		 <menu
+			text="Compile" icon="jbox_ext/images/menu/c_re_x2.png"  classname="Jbox.test.TestCompile"
+		 />
+		 <menu
+			text="JBillTest" icon="jbox_ext/images/menu/c_bill_x1.png"  classname="Jbox.test.JBillTest"
+			exp="{tid:'sys_wordbook'}"
+		 />
+	</group>
+	<group text="系统设置" >
+		<menu
+			text="部门与员工管理" icon="jbox_ext/images/menu/c_op_xuser.png"  classname="Jbox.view.system.UserDept"
+		 />
+		 <menu
+			text="数据字典" icon="jbox_ext/images/menu/c_disk.png"  classname="Jbox.view.system.WordBook"
+		 />
+		 <menu
+			text="职位配置" icon="jbox_ext/images/menu/c_boll.png"  classname="Ext.Panel"
+		 />
+	</group>
+	<group text="流程管理" >
+		<menu
+			text="工作流定义" icon="jbox_ext/images/menu/c_x_x1.png"  classname="Jbox.view.workflow.WfDefine"
+		 />
+	</group>
+</menus>
